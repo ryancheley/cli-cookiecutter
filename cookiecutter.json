@@ -1,11 +1,14 @@
 {
-    "project_slug": "core",
-    "library_name": "my-awesome-library",
-    "library_folder": "my_awesome_library" ,
+    "app_name": "",
+    "hyphenated": "{{ '-'.join(cookiecutter['app_name'].lower().split()).replace('_', '-') }}",
+    "underscored": "{{ cookiecutter.hyphenated.replace('-', '_') }}",
     "library_description": "My awesome library description",
     "author_name": "Ryan Cheley",
+    "github_username": "",
     "author_email": "rcheley@gmail.com",
     "_copy_without_render": [
-        "justfile"
+        "justfile",
+        ".github/workflows/publish.yml",
+        ".github/workflows/test.yml"
     ]    
 }

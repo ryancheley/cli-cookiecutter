@@ -23,7 +23,7 @@ gitclean:
 
 # run mypy on the files
 mypy:
-    mypy {{cookiecutter.library_name}}/*.py --no-strict-optional
+    mypy {{cookiecutter.hyphenated}}/*.py --no-strict-optional
 
 
 # generates the README.md file --help section
