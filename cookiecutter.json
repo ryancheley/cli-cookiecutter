@@ -1,0 +1,11 @@
+{
+    "project_slug": "core",
+    "library_name": "my-awesome-library",
+    "library_folder": "my_awesome_library" ,
+    "library_description": "My awesome library description",
+    "author_name": "Ryan Cheley",
+    "author_email": "rcheley@gmail.com",
+    "_copy_without_render": [
+        "justfile"
+    ]    
+}

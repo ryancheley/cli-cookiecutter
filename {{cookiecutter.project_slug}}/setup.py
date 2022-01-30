@@ -15,27 +15,27 @@ def get_long_description():
 
 
 setup(
-    name="pelican-to-sqlite",
-    description="CLI tool for loading local pelican markdown files into a SQLite database",
+    name="{{cookiecutter.library_name}}",
+    description="{{cookiecutter.library_description}}",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
-    author="Ryan Cheley",
+    author="{{cookiecutter.author_name}}",
     version=VERSION,
     license="Apache License, Version 2.0",
     packages=find_packages(),
-    install_requires=["sqlite-utils", "click", "html2text", "pelican"],
+    install_requires=[],
     extras_require={"test": ["pytest"]},
-    tests_require=["pelican-to-sqlite[test]"],
+    tests_require=["{{cookiecutter.library_name}}[test]"],
     setup_requires=["pytest-runner"],
     entry_points="""
         [console_scripts]
-        pelican-to-sqlite=pelican_to_sqlite.cli:cli
+        {{cookiecutter.library_name}}={{cookiecutter.library_folder}}.cli:cli
     """,
-    url="https://github.com/ryancheley/pelican-to-sqlite",
+    url="https://github.com/ryancheley/{{cookiecutter.library_name}}",
     project_urls={
-        "Issues": "https://github.com/ryancheley/pelican-to-sqlite/issues",
-        "CI": "https://github.com/ryancheley/pelican-to-sqlite/actions",
-        "Changelog": "https://github.com/ryancheley/pelican-to-sqlite/releases",
+        "Issues": "https://github.com/ryancheley/{{cookiecutter.library_name}}/issues",
+        "CI": "https://github.com/ryancheley/{{cookiecutter.library_name}}/actions",
+        "Changelog": "https://github.com/ryancheley/{{cookiecutter.library_name}}/releases",
     },
     python_requires=">=3.7",
 )
